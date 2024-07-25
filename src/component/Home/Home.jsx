@@ -39,6 +39,7 @@ const Home = () => {
           ))}
         </div>
       </section>
+      {/* Login */}
     </div>
   );
 };
