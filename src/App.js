@@ -19,8 +19,8 @@ function App() {
   const auth = useSelector(store=>store);
   // Get user
   useEffect(() => {
-    dispatch(getUser(auth.jwt || jwt));
-  }, [auth.jwt]);
+    dispatch(getUser(jwt || auth.jwt));
+  }, [jwt]);
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline/>

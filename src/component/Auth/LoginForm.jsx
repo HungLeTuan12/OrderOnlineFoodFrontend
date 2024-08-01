@@ -13,7 +13,8 @@ export const LoginForm = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const handleSubmit = (values) => {
-    dispatch(loginUser({ reqData: values, navigate }));
+    console.log("values:", values);
+    dispatch(loginUser({ userData: values, navigate }));
   };
   return (
     <div>
@@ -34,6 +35,7 @@ export const LoginForm = () => {
             as={TextField}
             name="password"
             label="Password"
+            type="password"
             fullWidth
             variant="outlined"
             margin="normal"
